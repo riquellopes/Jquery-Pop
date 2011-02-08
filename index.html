@@ -1,0 +1,32 @@
+<html>
+<head>
+	<title></title>
+	<script src="jquery-1.4.2.min.js" type="text/javascript"></script>
+	<script src="jquery.pop.js" type="text/javascript"></script>
+	<script>
+		$(function(){
+			$("a, input:button").pop({
+				beforeopen:function()
+				{
+					alert("Opened.");
+				},
+				afterclose:function()
+				{
+					alert("Closed.");
+				},
+				param:{
+					width:600,
+					height:400,
+					status:true
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+	<ul>
+		<li><a href="pop-up.html">pop-up</a></li>
+		<li><input type="button" url="pop-up.html" value="pop-up"></li>
+	</ul>
+</body>
+</html>
